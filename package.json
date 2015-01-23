@@ -6,20 +6,24 @@
   "dependencies": {
   },
   "devDependencies": {
-  "chai": "^1.10.0",
-  "mocha": "^2.1.0"
+    "chai": "^1.10.0",
+    "mocha": "^2.1.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "./node_modules/mocha/bin/mocha",
+    "lint": "npm run lint-json && npm run lint-js && npm run lint-js-style",
+    "lint-json": "jsonlint -q package.json .jscsrc .jshintrc",
+    "lint-js": "jshint .",
+    "lint-js-style": "jscs ."
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/erlandsona/MochaBucks.git"
+    "url": "https://github.com/NSS-Cohort-8/MochaBucks.git"
   },
-  "author": "Austin <austin@erlandson.com>",
+  "author": "Scott <scott@sscotth.io>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/erlandsona/MochaBucks/issues"
+    "url": "https://github.com/NSS-Cohort-8/MochaBucks/issues"
   },
-  "homepage": "https://github.com/erlandsona/MochaBucks"
+  "homepage": "https://github.com/NSS-Cohort-8/MochaBucks"
 }
